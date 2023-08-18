@@ -16,12 +16,12 @@
                 <li class="page-links"><a href="../about-us">Contact Us</a></li>
 
                 <li class="search-li">
-                    <form action="../blogs/search.php" method="GET" id="search_form">
-                        <input type="text" name="search" id="search" placeholder="Search Artwork" autocomplete="off">
+                    <form action="../search.php" method="GET" id="search_form">
+                        <input type="text" name="search" id="search" placeholder="Search Artwork" autocomplete="off">   
                     </form>
                     <img src="../img/search.png" id="desktop-search-btn" alt="Search btn" onclick="open_search()">
                     <img src="../img/search.png" id="mobile-search-btn" alt="Search btn" onclick="search_form.submit()">
-                    <!-- <img src="../img/close.svg" id="close-btn" alt="close btn" onclick="close_search()"> -->
+                    <img src="../img/close.svg" id="close-btn" alt="close btn" onclick="close_search()">
                 </li>
             </ul>
         </div>
