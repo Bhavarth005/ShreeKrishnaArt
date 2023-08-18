@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 20vh;
-    height: 60vh;
+    height: 70vh;
     background: linear-gradient(to right, rgb(12, 12, 12), rgba(29, 28, 28, 0.733), rgba(131, 124, 124, 0));
     background-position: center;
     background-size: cover;
@@ -22,7 +22,8 @@
 {
     font-size: 60px;
     background: url(../img/gold_texture.jpg);
-    background-position: top;
+    background-position: right;
+    background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent
