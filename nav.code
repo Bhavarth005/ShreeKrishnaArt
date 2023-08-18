@@ -1,6 +1,6 @@
     <nav>
         <a href="../" class="logo">
-            <img src="../img/logo.png" alt="SKA Logo">
+            <img src="../logo/gold.png" alt="SKA Logo">
             <h1>Shree Krishna Art</h1>
         </a>
         <div class="menu-btn" onclick="toggle_menu()">
