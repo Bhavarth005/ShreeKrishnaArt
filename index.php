@@ -7,6 +7,7 @@
     <title>Shree Krishna Art</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/nav.css">
+    <script src="./js/nav.js" defer></script>
 </head>
 <body>
     <?php

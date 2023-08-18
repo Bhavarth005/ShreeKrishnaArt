@@ -31,7 +31,7 @@ nav .logo{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
 nav .logo h1{
@@ -43,7 +43,7 @@ nav .logo h1{
 }
 
 nav .logo img{
-    height: 35px;
+    height: 65px;
 }
 
 .navigation{
