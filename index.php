@@ -38,6 +38,25 @@
         </div>
         <img class="hero-bg-img" id="hero-bg-img" src="img/homepage-hero.jpg" alt="">
     </section>
+
+    <section class="img-showcase">
+        <h1>Categories</h1>
+        <div class="img-container">
+            <div class="img-box">
+                <h3>Image text here</h3>
+            </div>
+            <div class="img-box">
+                <h3>Image text here</h3>
+            </div>
+            <div class="img-box">
+                <h3>Image text here</h3>
+            </div>
+            <div class="img-box">
+                <h3>Image text here</h3>
+            </div>
+        </div>
+        <a href="#">See more</a>
+    </section>
     
 </body>
 </html>
