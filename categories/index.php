@@ -36,6 +36,7 @@
                 <h3>Image text here</h3>
             </div>
         </div>
+        <a href="#">See more</a>
     </section>
 
     <script>
