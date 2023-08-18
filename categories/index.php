@@ -7,8 +7,9 @@
     <title>Shree Krishna Art</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/homepage-hero.css">
     <link rel="stylesheet" href="../css/categories.css">
-    <script src="./js/nav.js" defer></script>
+    <script src="../js/nav.js" defer></script>
 </head>
 <body>
     <?php
@@ -19,6 +20,11 @@
         
         echo $nav_data;
     ?>
+
+    <section class="hero category-hero">
+        <h1>Explore various categories</h1>
+        <img class="hero-bg-img" id="hero-bg-img" src="../img/category_bg.jpg" alt="">
+    </section>
 
     <section class="img-showcase">
         <h1>Categories</h1>
