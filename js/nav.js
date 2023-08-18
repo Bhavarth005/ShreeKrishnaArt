@@ -1,6 +1,7 @@
 let menu_bars = document.querySelectorAll('.bar');
 let menu_status = false;
-
+let close_btn = document.getElementById('close-btn');
+let ul = document.querySelector('nav ul');
 
 function toggle_menu(){
     if(!menu_status){
