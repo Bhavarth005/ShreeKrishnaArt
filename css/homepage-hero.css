@@ -1,0 +1,168 @@
+@import url(base.css);
+
+.hero{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    height: 60vh;
+    background: linear-gradient(to right, rgb(12, 12, 12), rgba(29, 28, 28, 0.733), rgba(131, 124, 124, 0));
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    border: none;
+}
+
+.hero .left{
+    width: 40vw;
+}
+.hero-line-1
+{
+    font-size: 60px;
+    background: linear-gradient(45deg, var(--light-gold), var(--dark-gold));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent
+}
+.hero-line-2{
+    font-size: 30px;
+    color: #eeef;
+}
+
+.hero .left h1{
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.hero .left p{
+    margin-bottom: 40px;
+    width: 80%;
+}
+
+.hero .right{
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.hero-bg-img{
+    position: absolute;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.secondary-btn{
+    margin-left: 20px;
+}
+
+.hero .right img{
+    height: 150px;
+    position: absolute;
+}
+
+.hero .right img:nth-child(1){
+    height: 300px;
+    transform: translate(0vw, 10%);
+    box-shadow: 0 0 15px #222;
+    animation: grow 1s cubic-bezier(0.05, 0.45, 0.25, 1) backwards;
+    animation-delay: 5.5s;
+}
+
+.hero .right img:nth-child(2){
+    box-shadow: 0 0 15px #222;
+    transform: translate(-15vw, -70%);
+    animation: grow 1s cubic-bezier(0.05, 0.45, 0.25, 1) backwards;
+    animation-delay: 5s;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+
+@keyframes grow{
+    0%{
+        scale: 0;
+    }100%{
+        scale: 1;
+    }
+}
+
+@media(max-width: 1024px){
+    .hero{
+        flex-direction: column;
+        height: auto;
+        margin-top: 70px;
+        background: linear-gradient(to bottom, #eeef, #fffb, #fffb, #fff0);
+    }
+
+    .hero-bg-img{
+        height: 100%;
+        width: auto;
+    }
+
+    .hero .left{
+        width: 80vw;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .hero .left h1{
+        font-size: 45px;
+    }
+
+    .hero .btn-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation-delay: 5s;
+    }
+
+    .hero .btn-container a{
+        margin: 5px 0;
+    }
+
+    .hero .left p{
+        margin-left: 10%;
+    }
+
+    .hero .right{
+        transform: none;
+        height: auto;
+        margin-top: 100px;
+        margin-bottom: 150px;
+        justify-content: center;
+    }
+    
+    .hero .right img{
+        height: 100px;
+        margin: 0;
+        transform: none;
+        position: relative;
+    }
+
+    .hero .right img:nth-child(1){
+        height: 180px;
+        transform: translate(67%, 37%);
+        box-shadow: 0 0 15px #222;
+        animation-delay: 5.5s;
+    }
+    
+    .hero .right img:nth-child(2){
+        height: 110px;
+        box-shadow: 0 0 15px #222;
+        transform: translate(-60%, -18%);
+        animation-delay: 5s;
+    }
+}

@@ -7,6 +7,7 @@
     <title>Shree Krishna Art</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/homepage.css">
     <script src="./js/nav.js" defer></script>
 </head>
 <body>
@@ -26,6 +27,17 @@
         anchors[page_id].setAttribute("href", "#");
     </script>
 
+    <section class="hero">
+        <div class="left">
+            <h1><span class="hero-line-1">Shree Krishna Art</span><br><span class="hero-line-2">Divine MasterPieces In Pure Gold</span></h1>
+            <div class="btn-container">
+                <a class="primary-btn" href="#products">Explore Art</a>
+            </div>
+        </div>
+        <div class="right">
+        </div>
+        <img class="hero-bg-img" id="hero-bg-img" src="img/homepage-hero.jpg" alt="">
+    </section>
     
 </body>
 </html>
