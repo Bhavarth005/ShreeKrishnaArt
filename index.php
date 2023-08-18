@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/categories.css">
     <script src="./js/nav.js" defer></script>
 </head>
 <body>
@@ -64,6 +65,25 @@
                 <h3>Image text here</h3>
             </div>
             <div class="cat-box">
+                <h3>Image text here</h3>
+            </div>
+        </div>
+        <a href="#">See more</a>
+    </section>
+
+    <section class="img-showcase">
+        <h1>Popular Works of Art</h1>
+        <div class="img-container">
+            <div class="img-box">
+                <h3>Image text here</h3>
+            </div>
+            <div class="img-box">
+                <h3>Image text here</h3>
+            </div>
+            <div class="img-box">
+                <h3>Image text here</h3>
+            </div>
+            <div class="img-box">
                 <h3>Image text here</h3>
             </div>
         </div>
