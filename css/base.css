@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --light-gold: #C6A61C;
+    --dark-gold: #8A5B1B;
+    --light-green: #92F217;
+    /* --primary-color: rgb(86, 88, 142); */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: 'Quicksand';
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+::-webkit-scrollbar{
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #888;
+    border: 3px solid #fff;
+    border-radius: 8px;
+}
+
+
+.wa{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    z-index: 999;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    background: rgb(50, 217, 81);
+    box-shadow: 0px 10px 20px #2224;
+    border-radius: 40px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.wa img{
+    height: 50px;
+    filter: brightness(1000%);
+}
+
+.wa p{
+    font-weight: 600;
+    margin: 0;
+    min-width: 100px;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+    transform: translateX(10px);
+    transition: 0.5s ease;
+}
+
+.wa:hover{
+    width: 160px;
+}
+
+.wa:hover p{
+    transform: translateX(0);
+    margin: 0;
+}
