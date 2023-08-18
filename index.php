@@ -39,19 +39,31 @@
         <img class="hero-bg-img" id="hero-bg-img" src="img/homepage-hero.jpg" alt="">
     </section>
 
-    <section class="img-showcase">
+    <section class="cat-showcase">
         <h1>Categories</h1>
-        <div class="img-container">
-            <div class="img-box">
+        <div class="cat-container">
+            <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
-            <div class="img-box">
+            <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
-            <div class="img-box">
+            <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
-            <div class="img-box">
+            <div class="cat-box">
+                <h3>Image text here</h3>
+            </div>
+            <div class="cat-box">
+                <h3>Image text here</h3>
+            </div>
+            <div class="cat-box">
+                <h3>Image text here</h3>
+            </div>
+            <div class="cat-box">
+                <h3>Image text here</h3>
+            </div>
+            <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
         </div>

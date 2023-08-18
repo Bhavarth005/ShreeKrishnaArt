@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 20vh;
+    margin-top: 15vh;
     height: 70vh;
     background: linear-gradient(to right, rgb(12, 12, 12), rgba(29, 28, 28, 0.733), rgba(131, 124, 124, 0));
     background-position: center;
@@ -23,7 +23,7 @@
     font-size: 60px;
     background: url(../img/gold_texture.jpg);
     background-position: right;
-    background-size: cover;
+    background-size: 150%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent
@@ -106,7 +106,7 @@
         flex-direction: column;
         height: auto;
         margin-top: 70px;
-        background: linear-gradient(to bottom, #eeef, #fffb, #fffb, #fff0);
+        background:  linear-gradient(to bottom, rgb(12, 12, 12), rgba(29, 28, 28, 0.733), rgba(131, 124, 124, 0));
     }
 
     .hero-bg-img{
