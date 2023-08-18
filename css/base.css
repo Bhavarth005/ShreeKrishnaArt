@@ -74,7 +74,7 @@ body{
     margin: 0;
 }
 
-section h1{
+section:not(.hero) h1{
     display: inline-block;
     text-align: center;
     font-size: 35px;
@@ -84,4 +84,13 @@ section h1{
     background-image: linear-gradient(45deg, var(--light-gold), var(--dark-gold));
     background-clip: text;
     -webkit-background-clip: text;
+}
+.primary-btn
+{
+    border: 1px solid var(--light-gold);
+    padding: 10px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: #eeef;
+    font-weight: 500;
 }
