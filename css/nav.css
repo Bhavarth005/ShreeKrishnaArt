@@ -48,6 +48,13 @@ nav .logo img{
     filter: drop-shadow(0px 4px 2px#0004);
 }
 
+nav .logo .feather
+{
+    height: 60px;
+    filter: drop-shadow(0px 4px 2px#0004);
+    transform: rotate(18deg) translateY(-9px) translateX(-2px);
+}
+
 .navigation{
     margin-right: 40px;
 }
@@ -154,6 +161,12 @@ nav ul li a.active{
         display: flex;
         align-items: flex-start;
         justify-content: center;
+    }
+    nav .logo .feather
+    {
+        height: 45px;
+        filter: drop-shadow(0px 4px 2px#0004);
+        transform: rotate(18deg) translateY(-6px) translateX(-2px);
     }
 
     .navigation{

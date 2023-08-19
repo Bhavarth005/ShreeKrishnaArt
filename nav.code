@@ -2,6 +2,7 @@
         <a href="../" class="logo">
             <img src="../logo/gold.png" alt="SKA Logo">
             <h1>Shree Krishna Art</h1>
+            <img src="../img/feather.png" alt="feather" class="feather">
         </a>
         <div class="menu-btn" onclick="toggle_menu()">
             <div class="bar"></div>
