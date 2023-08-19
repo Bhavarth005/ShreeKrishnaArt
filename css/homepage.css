@@ -53,6 +53,7 @@
     background-size: cover;
     background-position: center;
 }
+
 /* .cat-container .cat-box:nth-child(3){
     background: linear-gradient(to bottom, #0000, #0000, #000), url("../img/img1.jpeg");
     background-size: cover;
@@ -105,4 +106,23 @@
         transform: translateX(10px);
     }
 
+    .cat-container a{
+        width: 40%;
+    }
+
+    .cat-container .cat-box{
+        width: 100%;
+    }
+
+    .cat-container .cat-box h3{
+        font-size: 18px;
+    }
+
+    .img-showcase .img-container{
+        gap: 10px;
+    }
+
+    .img-showcase .img-container a{
+        width: 40%;
+    }
 }
