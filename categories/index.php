@@ -29,20 +29,28 @@
     <section class="img-showcase">
         <h1>Categories</h1>
         <div class="img-container">
+            <a href="#">
             <div class="img-box">
                 <h3>Image text here</h3>
             </div>
+            </a>
+            <a href="#">
             <div class="img-box">
                 <h3>Image text here</h3>
             </div>
+            </a>
+            <a href="#">
             <div class="img-box">
                 <h3>Image text here</h3>
             </div>
+            </a>
+            <a href="#">
             <div class="img-box">
                 <h3>Image text here</h3>
             </div>
+            </a>
         </div>
-        <a href="#">See more</a>
+        <a href="#" class="see-more-btn">See more</a>
     </section>
 
     <script>
