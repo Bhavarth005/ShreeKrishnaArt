@@ -14,9 +14,10 @@
 }
 
 .cat-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
     place-items: center;
     justify-content: center;
     gap: 10px;
