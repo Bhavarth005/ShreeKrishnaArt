@@ -86,7 +86,7 @@
         </a>    
             
         </div>
-        <a href="#">See more</a>
+        <a href="#" class="see-more-btn">See more</a>
     </section>
     <hr id="artwork-hr">
     <section class="img-showcase">
@@ -114,7 +114,7 @@
             </a>
            
         </div>
-        <a href="#">See more</a>
+        <a href="#" class="see-more-btn">See more</a>
     </section>
     <?php
         // Reading footer html from a common file

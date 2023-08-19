@@ -23,6 +23,11 @@
     gap: 10px;
 }
 
+.cat-container a{
+    display: inline-flex;
+    text-decoration: none;
+}
+
 .cat-container .cat-box{
     height: 150px;
     width: 250px;
@@ -59,7 +64,7 @@
     background-position: center;
 } */
 
-.cat-showcase a{
+.cat-showcase .see-more-btn{
     display: inline-block;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -71,7 +76,7 @@
     position: relative;
 }
 
-.cat-showcase a::after{
+.cat-showcase .see-more-btn::after{
     content: '';
     position: absolute;
     display: block;
@@ -82,7 +87,7 @@
     transition: 0.3s ease;
 }
 
-.cat-showcase a:hover::after{
+.cat-showcase .see-more-btn:hover::after{
     width: 100%;
 }
 
