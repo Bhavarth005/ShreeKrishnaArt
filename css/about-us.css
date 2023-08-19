@@ -1,0 +1,170 @@
+.about-us-hero{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    justify-content: initial;
+}
+
+.about-us-hero h1{
+    font-size: 45px;
+    color: #fff;
+}
+.about-us-hero p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #eeef;
+}
+
+.about-us-hero .left{
+    width: auto;
+    margin-left: 130px;
+}
+.about-us-hero .left img{
+    height: 300px;
+}
+
+.about-us-hero .right
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.about-us-hero .right p{
+    text-align: justify;
+}
+
+.achievements .achievements-img{
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    margin-left: 20vw;
+    height: 50vh;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.achievements .achievements-img .col-1{
+    height: 100%;
+    width: auto;
+    flex: 1;
+    background: url(../img/img1.jpeg);
+    background-size: cover;
+}
+.achievements .achievements-img .col-2{
+    height: 100%;
+    width: auto;
+    background: url(../img/img1.jpeg);
+    background-size: cover;
+    flex: 1;
+}
+.achievements .achievements-img .col-3{
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 2;
+}
+.achievements .achievements-img .col-3 .top
+{
+    height: 50%;
+    background: url(../img/img2.png);
+    background-size: cover;
+}
+.achievements .achievements-img .col-3 .bottom
+{
+    height: 50%;
+    background: url(../img/img2.png);
+    background-size: cover;
+}
+
+.contact-us p
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+.contact-us .contact-container
+{
+    width: 15vw;
+    margin-left: 42.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+
+}
+.contact-us .contact-container a
+{
+    text-align: left;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    display: flex;
+}
+.contact-us .contact-container a img{
+    filter: invert(0);
+}
+@media(max-width: 1024px){
+    .about-us-hero{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .about-us-hero .left img{
+        height: 250px;
+    }
+    .about-us-hero .left{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .about-us-hero h1{
+        font-size: 30px;
+        color: #fff;
+    }
+    .about-us-hero p{
+        font-size: 18px;
+        font-weight: 600;
+        color: #eeef;
+    }
+    .about-us-hero .right
+    {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .achievements .achievements-img{
+        width: 80vw;
+        margin-left: 10vw;
+        height: 20vh;
+    }
+    .contact-us p
+    {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .contact-us .contact-container
+    {
+        width: 50vw;
+        margin-left: 25vw;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 20px;
+    }   
+    .contact-us .contact-container a
+    {
+        text-align: left;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        display: flex;
+    }
+    .contact-us .contact-container a img{
+        height: 20px;
+    }
+}
