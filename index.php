@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script src="./js/nav.js" defer></script>
 </head>
 <body>
@@ -43,52 +44,85 @@
     <section class="cat-showcase">
         <h1>Categories</h1>
         <div class="cat-container">
+        <a href="#">
             <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
+        </a>    
+        <a href="#">
             <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
+        </a>    
+        <a href="#">
             <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
+        </a>    
+        <a href="#">
             <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
+        </a>    
+        <a href="#">
             <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
+        </a>    
+        <a href="#">
             <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
+        </a>    
+        <a href="#">
             <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
+        </a>    
+        <a href="#">
             <div class="cat-box">
                 <h3>Image text here</h3>
             </div>
+        </a>    
+            
         </div>
         <a href="#">See more</a>
     </section>
-
+    <hr id="artwork-hr">
     <section class="img-showcase">
         <h1>Popular Works of Art</h1>
         <div class="img-container">
-            <div class="img-box">
-                <h3>Image text here</h3>
-            </div>
-            <div class="img-box">
-                <h3>Image text here</h3>
-            </div>
-            <div class="img-box">
-                <h3>Image text here</h3>
-            </div>
-            <div class="img-box">
-                <h3>Image text here</h3>
-            </div>
+            <a href="#">
+                <div class="img-box">
+                    <h3>Image text here</h3>
+                </div>
+            </a>
+            <a href="#">
+                <div class="img-box">
+                    <h3>Image text here</h3>
+                </div>
+            </a>
+            <a href="#">
+                <div class="img-box">
+                    <h3>Image text here</h3>
+                </div>
+            </a>
+            <a href="#">
+                <div class="img-box">
+                    <h3>Image text here</h3>
+                </div>
+            </a>
+           
         </div>
         <a href="#">See more</a>
     </section>
-    
+    <?php
+        // Reading footer html from a common file
+        // The active class will be added later with JS
+        $footer_file = fopen("footer.code", "r");
+        $footer_data = str_replace("../", "./", fread($footer_file, filesize("footer.code")));
+        
+        echo $footer_data;
+    ?>
 </body>
 </html>

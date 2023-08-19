@@ -9,7 +9,11 @@
 html{
     scroll-behavior: smooth;
 }
-
+hr{
+    border: 1px solid #ccc;
+    width: 40%;
+    margin: 100px 30%;
+}
 *{
     font-family: 'Quicksand';
     -webkit-tap-highlight-color: transparent;

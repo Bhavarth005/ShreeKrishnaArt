@@ -1,0 +1,36 @@
+    <footer>
+        <div class="col">
+            <div class="container">
+                <h2>Explore More</h2>
+                <ul>
+                    <li><a href="#artwork-hr">Popular Artworks</a></li>
+                    <li><a href="../categories/">Various Categories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            <div class="container">
+                <h2>Follow Us</h2>
+                <div class="social-container">
+                    <a href="https://www.facebook.com//"><img src="../img/facebook.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/"><img src="../img/instagram.svg" alt="instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-container">
+                    <a class="contact" href="tel:+919624201001">
+                        <img src="../img/phone.svg" alt="Phone">
+                        +91 9624201001
+                    </a>
+                    <a class="contact" href="mailto:info@g6superhomes.com">
+                        <img src="../img/email.svg" alt="Phone">
+                        mail@google.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <p class="end">Shree Krishna Art @ 2023</p>
