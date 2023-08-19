@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/homepage-hero.css">
     <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script src="../js/nav.js" defer></script>
 </head>
 <body>
@@ -27,7 +28,7 @@
     </section>
 
     <section class="img-showcase">
-        <h1>Categories</h1>
+        <h1>Category Name</h1>
         <div class="img-container">
             <a href="#">
             <div class="img-box">
@@ -61,6 +62,13 @@
         anchors[page_id].setAttribute("href", "#");
     </script>
 
-    
+    <?php
+        // Reading footer html from a common file
+        // The active class will be added later with JS
+        $footer_file = fopen("../footer.code", "r");
+        $footer_data = fread($footer_file, filesize("../footer.code"));
+        
+        echo $footer_data;
+    ?>
 </body>
 </html>
