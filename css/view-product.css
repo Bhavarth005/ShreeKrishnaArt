@@ -1,0 +1,99 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 100px;
+}
+
+.content .left{
+    flex: 3;
+}
+
+.content .left .btns{
+    display: flex;
+    gap: 20px;
+}
+
+.content .left .btns > *{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.content .left .btns img{
+    height: 30px;
+}
+
+.content .left .btns img:hover{
+    cursor: pointer;
+}
+
+.content .left .btns h2{
+    display: inline;
+}
+
+.content .right{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.content .left .artwork-title{
+    font-size: 35px;
+}
+
+.content .specs h2{
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+.content .text{
+    font-weight: 500;
+}
+
+.content .desc .text{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.content .right .more-imgs{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.content .right .more-imgs .img-container{
+    all: unset;
+    background: #000;
+    height: 70px;
+    width: 50px;
+    overflow: hidden;
+}
+
+.content .right .more-imgs .img-container img{
+    all: unset;
+    height: 100%;
+}
+
+.content .right .more-imgs .img-container:hover{
+    cursor: pointer;
+}
+
+.main-preview-container{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.main-preview-container img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
