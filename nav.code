@@ -14,7 +14,7 @@
                 <li class="page-links"><a href="../">Home</a></li>
                 <li class="page-links"><a href="../about-us">About Us</a></li>
                 <li class="page-links"><a href="../categories">Categories</a></li>
-                <li class="page-links"><a href="../about-us">Contact Us</a></li>
+                <li class="page-links"><a href="../about-us/#contact-us-hr">Contact Us</a></li>
 
                 <li class="search-li">
                     <form action="../search.php" method="GET" id="search_form">

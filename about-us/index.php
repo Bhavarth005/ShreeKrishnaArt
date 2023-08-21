@@ -22,7 +22,7 @@
     ?>
     <script>
         // Adding active class to current page nav
-        const page_id = 0;
+        const page_id = 1;
         const anchors = document.querySelectorAll("nav li a");
         anchors[page_id].classList.add("active");
         anchors[page_id].setAttribute("href", "#");
@@ -51,7 +51,7 @@
             </div>
         </div>
     </section>
-    <hr>
+    <hr id="contact-us-hr">
     <section class="contact-us">
         <h1>Contact Us</h1>
         <p>For more details about the Artwork or the Prices</p>

@@ -59,6 +59,24 @@
     margin-top: 10px;
 }
 
+.content .left .note{
+    font-size: 16px;
+    font-weight: 600;
+    width: 120%;
+}
+.content .left .note p{
+    width: 100%;
+}
+.content .left .note a{
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+
+.content .left .note a:hover{
+    color: #8A5B1B;
+}
+
 .content .right .more-imgs{
     width: 100%;
     margin-top: 30px;

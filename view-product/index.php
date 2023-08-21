@@ -69,6 +69,9 @@
                     <h2><?php echo $share_count; ?></h2>
                 </div>
             </div>
+            <div class="note">
+                <p>*For any other details about artwork or prices<a href="../about-us/#contact-us-hr"> Contact Us </a></p>
+            </div>
         </div>
         <div class="right">
             <div class="main-preview-container">
