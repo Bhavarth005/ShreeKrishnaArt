@@ -1,0 +1,100 @@
+.search-section{
+    margin-top: 130px;
+}
+
+.new-artwork-btn{
+    padding: 15px 25px;
+    background: #56588e;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 50%;
+    margin-bottom: 50px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+}
+
+.new-artwork-btn:hover{
+    background: #6668a5;
+}
+
+.artwork{
+    position: relative;
+}
+
+.artwork .artwork-thumbnail{
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.artwork .thumbnail-img{
+    transition: 0.3s ease;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: cover;
+}
+
+.controls{
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    backdrop-filter: blur(0px);
+    transform: translateY(300px);
+    z-index: 99;
+    transition: 0.4s ease;
+}
+
+.controls .control-btn{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    background: #fff8;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls .control-btn img{
+    height: 30px;
+    aspect-ratio: 1;
+    transition: 0.2s ease;
+}
+
+.controls .control-btn:nth-child(2) img{
+    transform: translateY(2px);
+}
+
+.artwork:hover .thumbnail-img{
+    filter: blur(20px);
+}
+
+.artwork:hover .controls{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.control-btn:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    background: #6824b6;
+}
+
+.control-btn:nth-child(2):hover{
+    background: #f33;
+}
+
+.control-btn:hover img{
+    filter: invert(100%);
+}
