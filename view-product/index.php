@@ -1,19 +1,35 @@
 <?php
+    require "../globals.php";
+
     if(isset($_REQUEST["pid"])){
         global $pid;
         $pid = $_REQUEST["pid"];
 
-        // RETRIEVE DATA FROM DATABASE HERE
+        $query = "SELECT * FROM `$artworks` WHERE `artwork_id` = $pid LIMIT 1";
+        $result = mysqli_query($con, $query);
+        $row = mysqli_fetch_assoc($result);
 
-        $artwork_title = "Artwork Name";
-        $artwork_size = "15";
-        $artwork_weight = "3";
-        $artwork_desc = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit nihil numquam quod sit soluta cupiditate eos labore voluptatibus deserunt molestias.";
+        $artwork_title = $row["artwork_name"];
+        $artwork_size = $row["size"];
+        $artwork_weight = $row["weight"];
+        $artwork_desc = $row["desc"];
 
-        $like_count = 10;
-        $share_count = 10;
+        $img1 = $row["image_1"];
+        $img2 = $row["image_2"];
+        $img3 = $row["image_3"];
+        $img4 = $row["image_4"];
+        $img5 = $row["image_5"];
 
-        $img_paths = ["../img/img1.jpeg", "../img/img2.png"];
+        $imgs = Array(
+            $row["image_1"],
+            $row["image_2"],
+            $row["image_3"],
+            $row["image_4"],
+            $row["image_5"]
+        );
+
+        $like_count = $row["likes"];
+        $share_count = $row["shares"];
     }else{
         echo "Product ID not provided!";
         die();
@@ -55,7 +71,7 @@
         <div class="left">
             <h1 class="artwork-title"><?php echo $artwork_title; ?></h1>
             <div class="specs">
-                <h2 class="size">Size: <span class="text"><?php echo $artwork_size; ?> inch</span></h2>
+                <h2 class="size">Size: <span class="text"><?php echo $artwork_size; ?></span></h2>
                 <h2 class="size">Weight: <span class="text"><?php echo $artwork_weight; ?> kg</span></h2>
                 <h2 class="desc">Description:<br> <p class="text"><?php echo $artwork_desc; ?></p></h2>
             </div>
@@ -75,13 +91,23 @@
         </div>
         <div class="right">
             <div class="main-preview-container">
-                <img src="../img/img1.jpeg" id="main-preview">
+                <?php
+                    $main_image = base64_encode($imgs[0]);
+                    echo "<img src=\"data:image/jpeg;base64,$main_image\" id=\"main-preview\">"
+                ?>
             </div>
 
             <div class="more-imgs">
                 <?php
-                    for($i = 0; $i < count($img_paths); $i++)
-                        echo '<div class="img-container"><img onclick="update_image(this)" src="'.$img_paths[$i].'"></div>';
+                    foreach ($imgs as $img) {
+                        if($img != null){
+                            $image_data = base64_encode($img);
+                            $image_html = <<<IMG_HTML
+                                <div class="img-container"><img onclick="update_image(this)" src="data:image/jpeg;base64,$image_data"></div>
+                            IMG_HTML;
+                            echo $image_html;
+                        }
+                    }
                 ?>
             </div>
         </div>
