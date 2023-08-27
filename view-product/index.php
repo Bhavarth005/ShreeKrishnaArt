@@ -58,6 +58,8 @@
         $nav_data = str_replace("./", "./", fread($nav_file, filesize("../nav.code")));
         
         echo $nav_data;
+
+        print_r($_COOKIE);
     ?>
     <script>
         // Adding active class to current page nav
@@ -80,7 +82,7 @@
                     <img src="../img/like.svg">
                     <h2><?php echo $like_count; ?></h2>
                 </div>
-                <div class="like">
+                <div class="share">
                     <img src="../img/share.svg">
                     <h2><?php echo $share_count; ?></h2>
                 </div>
@@ -125,6 +127,42 @@
                     main_preview_container.style.opacity = 1;
                 }, 10);
             }, 350);
+        }
+
+        function set_cookie(name, value) {
+            document.cookie = name +'='+ value +';';
+        }
+        function delete_cookie(name) {
+            document.cookie = name +'=; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+
+        let like_btn = document.querySelector(".like");
+        let liked = false;
+        let share_btn = document.querySelector(".share");
+
+        if(document.cookie.includes("liked-<?php echo $pid; ?>")){
+            like_btn.querySelector("img").src = "../img/like-filled.svg";
+            liked = true;
+        }
+        
+        like_btn.onclick = () => {
+            if(liked){
+                delete_cookie("liked-<?php echo $pid; ?>");
+                fetch("like.php?pid=<?php echo $pid; ?>&mode=remove");
+                like_btn.querySelector("img").src = "../img/like.svg";
+                like_btn.querySelector("h2").innerText = parseInt(like_btn.querySelector("h2").innerText) - 1;
+                liked = false;
+            }else{
+                set_cookie("liked-<?php echo $pid; ?>");
+                fetch("like.php?pid=<?php echo $pid; ?>&mode=add");
+                liked = true;
+                like_btn.querySelector("img").src = "../img/like-filled.svg";
+                like_btn.querySelector("h2").innerText = parseInt(like_btn.querySelector("h2").innerText) + 1;
+            }
+        }
+        share_btn.onclick = () => {
+            fetch("share.php?pid=<?php echo $pid; ?>");
+            share_btn.querySelector("h2").innerText = parseInt(share_btn.querySelector("h2").innerText) + 1;
         }
     </script>
 
