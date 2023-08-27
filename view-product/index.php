@@ -164,6 +164,27 @@
             fetch("share.php?pid=<?php echo $pid; ?>");
             share_btn.querySelector("h2").innerText = parseInt(share_btn.querySelector("h2").innerText) + 1;
         }
+
+        
+    let images = document.querySelectorAll(".right img");
+
+    images.forEach(image => {
+        image.oncontextmenu = (e) => {
+            e.preventDefault();
+        }
+    })
+
+    window.onblur = () => {
+        images.forEach(image => {
+            image.style.filter = "blur(30px)";
+        });
+    }
+
+    window.onfocus = () => {
+        images.forEach(image => {
+            image.style.filter = "blur(0px)";
+        });
+    }
     </script>
 
     <?php
