@@ -1,0 +1,62 @@
+.container{
+    margin-top: 100px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.container h1{
+    font-size: 40px;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container form .field{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container form .field p{
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+}
+
+.container form .field textarea{
+    resize: vertical;
+}
+
+.container form select,
+.container form .field button,
+.container form .field input, 
+.container form .field textarea{
+    padding: 15px;
+    font: inherit;
+    outline: none;
+    border: 1px solid gold;
+    border-radius: 10px;
+    background: #fff7;
+}
+
+.container form .field button{
+    font-weight: 600;
+}
+
+.container form .field input:focus,
+.container form .field textarea:focus{
+    background: #fffb;
+}
+
+input[type="submit"]{
+    padding: 15px;
+    border-radius: 10px;
+    font: inherit;
+    outline: none;
+    border: 1px solid gold;
+    font-size: 20px;
+    background: #fffa;
+}
