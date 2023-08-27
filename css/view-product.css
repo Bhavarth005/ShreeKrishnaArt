@@ -96,6 +96,9 @@
 .content .right .more-imgs .img-container img{
     all: unset;
     height: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .content .right .more-imgs .img-container:hover{
