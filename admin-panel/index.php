@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/insert.css">
     <script src="../js/nav.js"></script>
 </head>
 <body>
@@ -20,28 +21,29 @@
         echo $nav_data;
     ?>
     <h1>Add Artwork</h1>
-    <form action="upload_artwork.php" method="POST">
+    <form action="upload_artwork.php" method="POST" enctype="multipart/form-data">
         <input type="text" name="artwork_name" placeholder="Enter Artwork Name" required>
         <textarea name="desc" placeholder="Enter Description" cols="50" rows="20" required></textarea>
         <input type="text" name="size" placeholder="Enter size" required>
-        <input type="number" name="weight" placeholder="Enter weight" required>
+        <input type="text" name="weight" placeholder="Enter weight" required>
         <select name="category">
-            <?php
+                <?php
                 include ("../globals.php");
                 $result = mysqli_query($con, "SELECT * FROM $category_master");
                 for($i = 0; $i < mysqli_num_rows($result); $i++)
                 {
+                    $row = mysqli_fetch_assoc($result); 
                     echo "
-                        <option value=".mysqli_fetch_assoc($result["category_id"]).">". 
-                        mysqli_fetch_assoc($result["category_name"])."</option>";
+                        <option value=".$row["category_id"].">".$row["category_name"]."</option>";
                 }
-            ?>
+                ?>
         </select>
         <p>Image 1</p><input type="file" name="img_1" required>
         <p>Image 2</p><input type="file" name="img_2">
         <p>Image 3</p><input type="file" name="img_3">
         <p>Image 4</p><input type="file" name="img_4">
         <p>Image 5</p><input type="file" name="img_5">
+        <input type="submit" name="sb">
     </form>
     <?php
     // Reading footer html from a common file
