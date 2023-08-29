@@ -82,39 +82,12 @@
 
             $ending = <<<END
             </div>
-            <a href="#" class="see-more-btn">See more</a>
+            <a href="../view-category?cid=$category_id" class="see-more-btn">See more</a>
             </section>
             END;
             echo $ending;
         }
     ?>
-
-    <!-- <section class="img-showcase">
-        <h1>Category Name</h1>
-        <div class="img-container">
-            <a href="#">
-            <div class="img-box">
-                <h3>Image text here</h3>
-            </div>
-            </a>
-            <a href="#">
-            <div class="img-box">
-                <h3>Image text here</h3>
-            </div>
-            </a>
-            <a href="#">
-            <div class="img-box">
-                <h3>Image text here</h3>
-            </div>
-            </a>
-            <a href="#">
-            <div class="img-box">
-                <h3>Image text here</h3>
-            </div>
-            </a>
-        </div>
-        <a href="#" class="see-more-btn">See more</a>
-    </section> -->
 
     <script>
         // Adding active class to current page nav

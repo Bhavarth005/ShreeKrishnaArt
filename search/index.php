@@ -1,12 +1,8 @@
 <?php
     require "../globals.php";
 
-    if(isset($_GET["cid"])){
-        $cid = $_GET["cid"];
-
-        $query = "SELECT `category_name` FROM `$category_master` WHERE `category_id` = $cid";
-        $result = mysqli_query($con, $query);
-        $category_name = mysqli_fetch_assoc($result)["category_name"];
+    if(isset($_GET["search"])){
+        $key = $_GET["search"];
 
         // Reading nav html from a common file
         // The active class will be added later with JS
@@ -15,7 +11,7 @@
         
         echo $nav_data;
     }else{
-        header("location: ../categories");
+        header("location: index.php");
     }
 
 ?>
@@ -36,16 +32,15 @@
 
 
 <section class="hero category-hero">
-    <h1><?php echo $category_name; ?></h1>
+    <h1>Search results for '<?php echo $key; ?>'</h1>
     <img class="hero-bg-img" id="hero-bg-img" src="../img/category_bg.jpg" alt="">
 </section>
 
 <div class="container">
-    <h1>Artworks of <?php echo $category_name ?></h1>
 
     <div class="artwork-container">
         <?php        
-            $query = "SELECT * FROM `$artworks` WHERE `category_id` = $cid";
+            $query = "SELECT * FROM `$artworks` WHERE `artwork_name` LIKE '%$key%'";
             $result = mysqli_query($con, $query);
 
             while(($row = mysqli_fetch_assoc($result))){

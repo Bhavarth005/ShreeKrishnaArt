@@ -10,7 +10,7 @@ let search_status = false;
 
 function open_search(){
     if(search_status){
-        // search_form.submit();
+        search_form.submit();
         return;
     }
     search_status = true;
