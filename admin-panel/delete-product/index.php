@@ -81,7 +81,13 @@
         $nav_file = fopen("../../nav.code", "r");
         $nav_data = str_replace("../", "../../", fread($nav_file, filesize("../../nav.code")));
         
+        if(!isset($_GET["pid"])){
+            echo "pid not provided!";
+            die();
+        }
+
         echo $nav_data;
+
     ?>
     
     <div class="container">
