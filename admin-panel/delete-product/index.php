@@ -1,9 +1,9 @@
 <?php
     session_start();
 
-    // if(!$_SESSION["login"]){
-    //     header("location: login.php");
-    // }
+    if(!$_SESSION["login"]){
+        header("location: ../login.php");
+    }
     
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Match password

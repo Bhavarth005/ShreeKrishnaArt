@@ -2,7 +2,7 @@
     session_start();
 
     if(!$_SESSION["login"]){
-        header("location: login.php");
+        header("location: ../login.php");
     }
     
     if($_SERVER["REQUEST_METHOD"] == "POST")
@@ -24,6 +24,10 @@
         $img_4 = null;
         $img_5 = null;
         
+        
+        $sql = "UPDATE `$artworks` SET `artwork_name` = '$artwork_name', `desc` = '$desc', `size` = '$size', `weight` = '$weight', `category_id` = $category WHERE `artwork_id` = $id";
+        mysqli_query($con, $sql);
+
         if (isset($_FILES["img_1"]) && $_FILES["img_1"]["error"] === UPLOAD_ERR_OK && ($_FILES["img_1"] != NULL)) {
             $img_1 = file_get_contents($_FILES["img_1"]["tmp_name"]);
             $img_1 = $con->real_escape_string($img_1);
@@ -51,8 +55,6 @@
             mysqli_query($con, "UPDATE `$artworks` SET `image_5` = '$img_5' WHERE `artwork_id` = $id");
         }
 
-        $sql = "UPDATE `$artworks` SET `artwork_name` = '$artwork_name', `desc` = '$desc', `size` = '$size', `weight` = '$weight', `category_id` = $category WHERE `artwork_id` = $id";
-        mysqli_query($con, $sql);
 
         if(mysqli_affected_rows($con) > 0){
             echo "<!DOCTYPE html>
