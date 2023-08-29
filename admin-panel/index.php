@@ -1,4 +1,9 @@
 <?php
+    session_start();
+
+    if(!$_SESSION["login"]){
+        header("location: login.php");
+    }
     require "../globals.php";
 
     // Reading nav html from a common file
@@ -8,6 +13,7 @@
     
     echo $nav_data;
 
+    
 ?>
 
 <head>

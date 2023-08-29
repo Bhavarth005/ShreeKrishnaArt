@@ -1,4 +1,10 @@
 <?php
+    session_start();
+
+    if(!$_SESSION["login"]){
+        header("location: login.php");
+    }
+
     require "../../globals.php";
 
     if(isset($_REQUEST["category-name"])){

@@ -1,10 +1,20 @@
 <?php
+    session_start();
+
+    if(!$_SESSION["login"]){
+        header("location: login.php");
+    }
+    
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Match password
-        if(true){
+        require "../../globals.php";
+        $pass = $_POST["password"];
+        $pass_hashed = md5($pass);
+        $username = $_SESSION["username"];
+        $result = mysqli_query($con, "SELECT * FROM $users WHERE username='$username' AND password='$pass_hashed'");
+        if(mysqli_num_rows($result)){
             $pid = $_POST["pid"];
             // password matched
-            require "../../globals.php";
             $query = "DELETE FROM `$artworks` WHERE `artwork_id` = $pid";
             $result = mysqli_query($con, $query);
             echo <<<ALERT_REDIRECT
@@ -13,6 +23,9 @@
                 window.location.href = "../";
             </script>
             ALERT_REDIRECT;
+        }
+        else{
+            echo "<script>alert(Wrong Credentials);</script>";
         }
     }
 ?>

@@ -12,6 +12,7 @@
         if(mysqli_num_rows($result)){
             session_start();
             $_SESSION["login"] = true;
+            $_SESSION["username"] = $username;
             header("location: index.php");
         }else{
             $err = true;
