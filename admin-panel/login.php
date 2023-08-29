@@ -31,8 +31,9 @@
 <body>
     <div class="main-container">
         <div class="logo-container">
-            <img src="../logo/gold.png" class="logo">
+            <a style="text-decoration: none;" href="../"><img src="../logo/gold.png" class="logo">
             <h1>Shree Krishna Art</h1>
+            </a>
         </div>
         <h1 class="heading">Login to Admin Panel</h1>
         <form method="POST" class="form">
