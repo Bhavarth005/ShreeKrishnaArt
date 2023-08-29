@@ -2,7 +2,7 @@
     session_start();
 
     if(!$_SESSION["login"]){
-        header("location: login.php");
+        // header("location: login.php");
     }
     require "../globals.php";
 
@@ -12,8 +12,6 @@
     $nav_data = str_replace("./", "./", fread($nav_file, filesize("../nav.code")));
     
     echo $nav_data;
-
-    
 ?>
 
 <head>

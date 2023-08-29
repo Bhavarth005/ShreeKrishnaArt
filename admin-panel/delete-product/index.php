@@ -9,6 +9,7 @@
         // Match password
         require "../../globals.php";
         $pass = $_POST["password"];
+        $pid = $_POST["pid"];
         $pass_hashed = md5($pass);
         $username = $_SESSION["username"];
         $result = mysqli_query($con, "SELECT * FROM $users WHERE username='$username' AND password='$pass_hashed'");
@@ -25,7 +26,7 @@
             ALERT_REDIRECT;
         }
         else{
-            echo "<script>alert(Wrong Credentials);</script>";
+            echo "<script>alert('Wrong Credentials');</script>";
         }
     }
 ?>
@@ -88,6 +89,7 @@
         <p>Confirm deletion of product by entering your password below:</p>
         
         <form method="POST">
+            <input type="number" name="pid" value="<?php echo $_GET['pid']?>" hidden>
             <input type="password" name="password" placeholder="Enter your password">
             <input type="submit" value="Delete Artwork">
         </form>
