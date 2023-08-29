@@ -35,7 +35,7 @@
             <h1>Shree Krishna Art</h1>
         </div>
         <h1 class="heading">Login to Admin Panel</h1>
-        <form action="./admin-home.php" method="POST" class="form">
+        <form method="POST" class="form">
             <p class="field-label">Username</p>
             <input type="text" name="username" id="username" placeholder="Enter Username" required>
             <p class="field-label label-pw">Password</p>

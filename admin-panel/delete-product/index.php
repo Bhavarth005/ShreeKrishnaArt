@@ -2,7 +2,7 @@
     session_start();
 
     if(!$_SESSION["login"]){
-        header("location: login.php");
+        header("location: ../login.php");
     }
     
     if($_SERVER["REQUEST_METHOD"] == "POST"){
