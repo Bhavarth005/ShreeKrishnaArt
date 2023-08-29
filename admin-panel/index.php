@@ -2,7 +2,7 @@
     session_start();
 
     if(!$_SESSION["login"]){
-        header("location: login.php");
+        // header("location: login.php");
     }
     require "../globals.php";
 
@@ -12,8 +12,6 @@
     $nav_data = str_replace("./", "./", fread($nav_file, filesize("../nav.code")));
     
     echo $nav_data;
-
-    
 ?>
 
 <head>
@@ -99,7 +97,7 @@
                         <div class="right">
                             <a target="_blank" href="../view-product?pid=$id"><img src="../img/open.png"></a>
                             <a href="edit-data?pid=$id"><img src="../img/edit.png"></a>
-                            <a href="delete-data?pid=$id"><img src="../img/delete.png"></a>
+                            <a href="delete-product?pid=$id"><img src="../img/delete.png"></a>
                         </div>
                     </div>
                 </div>
