@@ -125,10 +125,9 @@
 
 <script>
     // Adding active class to current page nav
-    const page_id = 2;
-    const anchors = document.querySelectorAll("nav li a");
-    anchors[page_id].classList.add("active");
-    anchors[page_id].setAttribute("href", "#");
+    // const page_id = 2;
+    // const anchors = document.querySelectorAll("nav li a");
+    // anchors[page_id].classList.add("active");
 
     document.querySelector("select").onchange = () => {
         document.querySelector("#filter-form").submit();

@@ -66,7 +66,6 @@
         const page_id = 2;
         const anchors = document.querySelectorAll("nav li a");
         anchors[page_id].classList.add("active");
-        anchors[page_id].setAttribute("href", "#");
     </script>
 
     <div class="content">
