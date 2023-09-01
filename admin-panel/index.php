@@ -28,13 +28,27 @@
     <script src="../js/nav.js" defer></script>
 </head>
 
+<style>
+.logout{
+    text-decoration: none;
+    padding: 8px;
+    border: 1px solid red;
+    background-color: rgb(233, 71, 98);
+    color: white;
+    border-radius: 5px;
+}
+.admin-hero h1{
+    font-size: 60px;
+    color: #fff;
+}
+</style>
 
-<section class="hero category-hero">
+<section class="hero admin-hero">
     <h1>Admin Panel</h1>
-    <img class="hero-bg-img" id="hero-bg-img" src="../img/category_bg.jpg">
+    <img class="hero-bg-img" id="hero-bg-img" src="../img/admin_bg.jpg">
 </section>
-
 <div class="container">
+    <a href="logout.php" class="logout">Logout</a>  
     <h1>All artworks</h1>
     <form id="filter-form">
         <select name="filter">
