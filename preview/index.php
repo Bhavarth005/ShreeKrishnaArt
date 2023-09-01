@@ -44,34 +44,32 @@
         }
     ?>
     <style>
-        .frame{
-            height: 300px;
-            position: absolute;
-            position: fixed;
-            z-index: 9;
-            left: 32%;
-            top: 13%;
-        }
-        body{
-            height: 100vh;
+        .preview-container{
+            position: relative;
+            background-color: #fff;
+            margin-top: 100px;
+            margin-inline: auto;
+            max-width: calc(100vw - 60px);
+            max-height: calc(100vh - 60px - 70px);
+            aspect-ratio: 4/3;
+            border-radius: 10px;
             overflow: hidden;
-        }
-        .hall{
-            height: 110vh;
-            position: fixed;
-            left: 50%;
-            transform: translateX(-50%);
-            min-width: 100%;
+            outline: 4px solid #555;
         }
 
-        @media(max-width: 720px){
-            .frame{
-                left: 50%;
-                transform: translateX(-50%);
-                max-width: 80%;
-                height: auto;
-                max-height: 300px;
-            }
+        .preview-container img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .preview-container .frame{
+            height: 35%;
+            width: auto;
+            position: absolute;
+            left: 34%;
+            top: 14%;
+            box-shadow: 10px 5px 9px 0px #00000008;
         }
 
         .hall-container{
@@ -79,9 +77,13 @@
             gap: 15px;
             position: fixed;
             z-index: 9;
-            bottom: 30px;
+            bottom: 45px;
             left: 50%;
             transform: translateX(-50%);
+        }
+
+        .hall{
+            transition: 0.5s ease;
         }
 
         .hall-box{
@@ -112,10 +114,10 @@
     </div>
 
     <div class="hall-container">
-        <div class="hall-box selected"><img src="../img/hall1.png"></div>
-        <div class="hall-box"><img src="../img/hall2.png"></div>
-        <div class="hall-box"><img src="../img/hall3.png"></div>
-        <div class="hall-box"><img src="../img/hall4.png"></div>
+        <div onclick="change_bg(this)" class="hall-box selected"><img src="../img/hall1.png"></div>
+        <div onclick="change_bg(this)" class="hall-box"><img src="../img/hall2.png"></div>
+        <div onclick="change_bg(this)" class="hall-box"><img src="../img/hall3.png"></div>
+        <div onclick="change_bg(this)" class="hall-box"><img src="../img/hall4.png"></div>
     </div>
 
     <script>
@@ -124,6 +126,35 @@
         const anchors = document.querySelectorAll("nav li a");
         anchors[page_id].classList.add("active");
         anchors[page_id].setAttribute("href", "#");
+
+        let hall_btns = Array.from(document.querySelectorAll(".hall-box"));
+        let active = hall_btns[0];
+        let hall = document.querySelector(".hall");
+        let frame = document.querySelector(".frame");
+
+        let coords = [
+            { left: "34%", top: "14%", boxShadow: "10px 5px 9px 0px #00000008" },
+            { height: "32%", left: "9%", top: "14%", boxShadow: "0px 5px 6px 2px #00000026" },
+            { left: "45%", top: "9%", boxShadow: "-9px 7px 13px 0px #00000029" },
+            { left: "17%", top: "9%", boxShadow: "-13px -4px 13px 0px #00000029" }
+        ];
+        
+        function change_bg(obj){
+            active.classList.remove("selected");
+            obj.classList.add("selected");
+            active = obj;
+            hall.style.filter = "blur(20px)";
+            hall.style.opacity = "0";
+            setTimeout(() => {
+                hall.src = obj.querySelector("img").src;
+                setTimeout(() => {
+                    hall.style.filter = "blur(0px)";
+                    hall.style.opacity = "1";
+                }, 00);
+            }, 500);
+
+            frame.animate(coords[hall_btns.indexOf(obj)], {duration: 1000, fill:"forwards", easing:"ease"});
+        }
     </script>
 
 </body>
