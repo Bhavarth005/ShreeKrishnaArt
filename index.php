@@ -14,6 +14,8 @@
 </head>
 <body>
     <?php
+        require "globals.php";
+
         // Reading nav html from a common file
         // The active class will be added later with JS
         $nav_file = fopen("nav.code", "r");
@@ -39,68 +41,38 @@
         <div class="right">
         </div>
         <img class="hero-bg-img" id="hero-bg-img" src="img/homepage-hero.jpg" alt="">
-    </section>  
-        <?php
-        // Fetching all categories
-        require "globals.php";
+    </section>
 
-        $query = "SELECT * FROM `$category_master`";
-        $result = mysqli_query($con, $query);
+    <section class="cat-showcase">
+        <h1>Categories</h1>
+        <div class="cat-container">
+            <?php
+                $query = "SELECT c.category_name, p.artwork_name, c.category_id, p.image_1 FROM category_master c INNER JOIN artworks p ON c.category_id = p.category_id WHERE p.artwork_id = ( SELECT MIN(artwork_id) FROM artworks WHERE category_id = c.category_id )";
 
-        while(($row = mysqli_fetch_assoc($result)) != null){
+                $result = mysqli_query($con, $query);
 
-            $category_id = $row["category_id"];
-            $category_name = $row["category_name"];
+                while(($row = mysqli_fetch_assoc($result)) != null){
+                    $cid = $row["category_id"];
+                    $name = $row["artwork_name"];
+                    $imageData = base64_encode($row["image_1"]);
+                    $html_code = <<<HTMLCODE
+                        <a href="./view-category?cid=$cid">
+                            <div class="img-box">
+                                <h3>$name</h3>
+                                <div class="bottom-overlay"></div>
+                                <img src="data:image/jpeg;base64,$imageData">
+                            </div>
+                        </a>
+                    HTMLCODE;
 
-            $category_section_header = <<< CSH
-            <section class="cat-showcase">
-            <div class="cat-container">
-            <h1>$category_name</h1>
-            CSH;
-            echo $category_section_header;
-
-
-            // First image will be the image of first artwork in this category
-            $first_image_query = "SELECT `artwork_id`, `image_1`, `artwork_name` FROM `$artworks` WHERE `category_id` = $category_id LIMIT 1";
-            $image_query_result = mysqli_query($con, $first_image_query);
-
-            if(mysqli_num_rows($image_query_result) > 0){
-                
-                for($i = 0; $i < mysqli_num_rows($image_query_result); $i++){
-                    $image_row = mysqli_fetch_array($image_query_result);
-                    $artwork_id = $image_row["artwork_id"];
-                    $image_blob = $image_row["image_1"];
-                    $image_data = base64_encode($image_blob);
-                    $artwork_name = $image_row["artwork_name"];
-                    
-                    $image = <<< IMG
-                    <a href="./view-category/?cid=$category_id">
-                    <div class="img-box">
-                    <h3>$category_name</h3>
-                    <div class="bottom-overlay"></div>
-                    <img src="data:image/jpeg;base64,$image_data">
-                    </div>
-                    </a>
-                    IMG;
-                    
-                    echo $image;
+                    echo $html_code;
                 }
-
-
-            }else{
-                echo "<p class='no-artwork'>No artwork to show in this category</p>";
-            }
-
-            $ending = <<<END
-            </div>
-            <a href="../view-category?cid=$category_id" class="see-more-btn">See more</a>
-            </section>
-            END;
-            echo $ending;
-        }
-    ?>
+            ?>
+        </div>
+        <a href="categories" class="see-more-btn">See more</a>
+    </section>
     <hr id="artwork-hr">
-    <section class="img-showcase">
+    <section class="img-showcase">  
         <h1>Popular Works of Art</h1>
         <div class="img-container">
         <?php    
@@ -116,11 +88,9 @@
                 $artwork_html = <<<ARTWORK_HTML
                 <a href="./view-product/?pid=$id">
                     <div class="img-box">
+                        <h3>$artwork_title</h3>
+                        <div class="bottom-overlay"></div>
                         <img src="data:image/jpeg;base64,$image">
-                    </div>
-                    <div class="title">
-                        <div class="left"><p>$artwork_title</p>
-                        </div>
                     </div>
                 </a>
                 ARTWORK_HTML;
@@ -128,9 +98,7 @@
             }
 
         ?>
-           
         </div>
-        <a href="#" class="see-more-btn">See more</a>
     </section>
     <?php
         // Reading footer html from a common file

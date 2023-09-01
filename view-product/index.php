@@ -85,6 +85,12 @@
                     <img src="../img/share.svg">
                     <h2><?php echo $share_count; ?></h2>
                 </div>
+                <div class="preview">
+                    <a href="../preview?pid=<?php echo $pid; ?>">
+                        <img src="../img/frame.png">
+                        <h2>Wall Preview</h2>
+                    </a>
+                </div>
             </div>
             <div class="note">
                 <p>*For any other details about artwork or prices<a href="../about-us/#contact-us-hr"> Contact Us </a></p>

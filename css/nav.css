@@ -85,6 +85,7 @@ nav ul li a.active{
     opacity: 1;
     background: var(--light-green);
     border-radius: 5px;
+    color: var(--dark-gold);
 }
 .navigation 
 

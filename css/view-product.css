@@ -34,6 +34,14 @@
     display: inline;
 }
 
+.content .left .btns .preview a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    gap: 10px;
+}
+
 .content .right{
     flex: 4;
     display: flex;
@@ -117,4 +125,14 @@
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
+    filter: drop-shadow(0 5px 10px #0004);
+}
+
+@media(max-width: 820px){
+    html, body{
+        overflow-x: hidden;
+    }
+    .content{
+        flex-direction: column-reverse;
+    }
 }
