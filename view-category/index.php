@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="../css/categories.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/individual-category.css">
+    <link rel="shortcut icon" href="../img/feather.png" type="image/png">   
     <script src="../js/nav.js" defer></script>
 </head>
 
@@ -49,13 +50,14 @@
             $result = mysqli_query($con, $query);
 
             while(($row = mysqli_fetch_assoc($result))){
+                $id = $row["artwork_id"];
                 $artwork_title = $row["artwork_name"];
                 $image = base64_encode($row["image_1"]);
                 $likes = $row["likes"];
                 $shares = $row["shares"];
                 
                 $artwork_html = <<<ARTWORK_HTML
-                <a href="#" class="artwork">
+                <a href="../view-product?pid=$id" class="artwork">
                     <div class="image">
                         <img src="data:image/jpeg;base64,$image">
                     </div>

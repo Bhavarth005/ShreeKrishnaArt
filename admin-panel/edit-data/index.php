@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../../css/nav.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/insert.css">
+    <link rel="shortcut icon" href="../../img/feather.png" type="image/png"> 
     <script src="../../js/nav.js"></script>
 </head>
 <body>

@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="../../css/categories.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/individual-category.css">
+    <link rel="shortcut icon" href="../../img/feather.png" type="image/png"> 
     <script src="../../js/nav.js" defer></script>
     <style>
         .container{

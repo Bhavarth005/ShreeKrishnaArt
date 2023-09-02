@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="../css/homepage-hero.css">
     <link rel="stylesheet" href="../css/categories.css">
     <link rel="stylesheet" href="../css/view-product.css">
+    <link rel="shortcut icon" href="../img/feather.png" type="image/png"> 
     <link rel="stylesheet" href="../css/footer.css">
     <script src="../js/nav.js" defer></script>
 </head>

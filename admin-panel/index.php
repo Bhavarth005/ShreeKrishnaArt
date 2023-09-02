@@ -25,15 +25,29 @@
     <link rel="stylesheet" href="../css/categories.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/individual-category.css">
+    <link rel="shortcut icon" href="../img/feather.png" type="image/png"> 
     <script src="../js/nav.js" defer></script>
 </head>
 
 <style>
+.container .btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .logout{
     text-decoration: none;
     padding: 8px;
     border: 1px solid red;
     background-color: rgb(233, 71, 98);
+    color: white;
+    border-radius: 5px;
+}
+.insert-data{
+    text-decoration: none;
+    padding: 8px;
+    border: 1px solid darkgreen;
+    background-color: rgb(18, 175, 18);
     color: white;
     border-radius: 5px;
 }
@@ -48,7 +62,10 @@
     <img class="hero-bg-img" id="hero-bg-img" src="../img/admin_bg.jpg">
 </section>
 <div class="container">
-    <a href="logout.php" class="logout">Logout</a>  
+    <div class="btns">
+        <a href="./insert-data/" class="insert-data">Add Artwork</a>  
+        <a href="logout.php" class="logout">Logout</a>  
+    </div>
     <h1>All artworks</h1>
     <form id="filter-form">
         <select name="filter">
