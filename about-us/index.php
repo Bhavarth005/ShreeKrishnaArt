@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/homepage-hero.css">
     <link rel="stylesheet" href="../css/about-us.css">
+    <link rel="shortcut icon" href="../img/feather.png" type="image/png"> 
     <script src="../js/nav.js" defer></script>
 </head>
 <body>
