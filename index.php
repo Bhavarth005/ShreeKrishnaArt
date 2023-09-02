@@ -35,7 +35,7 @@
         <div class="left">
             <h1><span class="hero-line-1">Shree Krishna Art</span><br><span class="hero-line-2">Divine MasterPieces In Pure Gold</span></h1>
             <div class="btn-container">
-                <a class="primary-btn" href="#products">Explore Art</a>
+                <a class="primary-btn" href="categories">Explore Art</a>
             </div>
         </div>
         <div class="right">
@@ -53,7 +53,7 @@
 
                 while(($row = mysqli_fetch_assoc($result)) != null){
                     $cid = $row["category_id"];
-                    $name = $row["artwork_name"];
+                    $name = $row["category_name"];
                     $imageData = base64_encode($row["image_1"]);
                     $html_code = <<<HTMLCODE
                         <a href="./view-category?cid=$cid">

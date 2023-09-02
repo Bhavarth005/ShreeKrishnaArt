@@ -2,7 +2,7 @@
     session_start();
 
     if(!$_SESSION["login"]){
-        // header("location: login.php");
+        header("location: login.php");
     }
     require "../globals.php";
 

@@ -6,7 +6,7 @@ nav{
     border-bottom: 1.5px solid #C4CC60;
     width: 100vw;
     height: 70px;
-    z-index: 10;
+    z-index: 100000;
     display: flex;
     align-items: center;
     justify-content: space-between;

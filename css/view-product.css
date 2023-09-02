@@ -30,16 +30,16 @@
     cursor: pointer;
 }
 
-.content .left .btns h2{
-    display: inline;
-}
-
-.content .left .btns .preview a{
+.content .left .btns a{
     display: flex;
     align-items: center;
     text-decoration: none;
     color: #000;
     gap: 10px;
+}
+
+.content .left .btns .preview a{
+    font-size: 15px;
 }
 
 .content .right{

@@ -69,7 +69,6 @@
             position: absolute;
             left: 34%;
             top: 14%;
-            box-shadow: 10px 5px 9px 0px #00000008;
         }
 
         .hall-container{
@@ -133,11 +132,13 @@
         let frame = document.querySelector(".frame");
 
         let coords = [
-            { left: "34%", top: "14%", boxShadow: "10px 5px 9px 0px #00000008" },
-            { height: "32%", left: "9%", top: "14%", boxShadow: "0px 5px 6px 2px #00000026" },
-            { left: "45%", top: "9%", boxShadow: "-9px 7px 13px 0px #00000029" },
-            { left: "17%", top: "9%", boxShadow: "-13px -4px 13px 0px #00000029" }
+            { left: "34%", top: "14%", filter: "drop-shadow(10px 5px 9px #00000008)" },
+            { height: "32%", left: "9%", top: "14%", filter: "drop-shadow(0px 5px 6px #000)" },
+            { left: "45%", top: "9%", filter: "drop-shadow(-9px 7px 13px #00000029)" },
+            { left: "17%", top: "9%", filter: "drop-shadow(-13px -4px 13px #00000029)" }
         ];
+
+        
         
         function change_bg(obj){
             active.classList.remove("selected");

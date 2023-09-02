@@ -3,7 +3,7 @@
             <div class="container">
                 <h2>Explore More</h2>
                 <ul>
-                    <li><a href="#artwork-hr">Popular Artworks</a></li>
+                    <li><a href="../#artwork-hr">Popular Artworks</a></li>
                     <li><a href="../categories/">Various Categories</a></li>
                 </ul>
             </div>

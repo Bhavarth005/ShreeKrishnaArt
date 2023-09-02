@@ -100,3 +100,13 @@ section:not(.hero) h1{
     color: #eeef;
     font-weight: 500;
 }
+
+@media(max-width: 820px){
+    section:not(.hero) h1{
+        width: 80vw;
+        margin: 0;
+        margin-left: 10vw;
+        margin-bottom: 30px;
+        transform: none;
+    }
+}

@@ -34,6 +34,10 @@
     text-align: justify;
 }
 
+.achievements{
+    margin-top: 100px;
+}
+
 .achievements .achievements-img{
     display: flex;
     flex-direction: row;
