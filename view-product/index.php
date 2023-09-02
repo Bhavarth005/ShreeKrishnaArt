@@ -83,7 +83,7 @@
                     <h2><?php echo $like_count; ?></h2>
                 </div>
                 <div class="share">
-                    <a target="_blank" href="https://wa.me/?text=Hey, take a look at this beautiful artwork by Shree Krishna Art: https://domain.com/view-product/?pid=<?php echo $pid; ?>"><img src="../img/share.svg">
+                    <a target="_blank" href="https://wa.me/?text=Hey, take a look at this beautiful artwork by Shree Krishna Art: https://ramsangani.com/view-product/?pid=<?php echo $pid; ?>"><img src="../img/share.svg">
                     <h2><?php echo $share_count; ?></h2>
                     </a>
                 </div>
@@ -95,7 +95,7 @@
                 </div>
             </div>
             <div class="note">
-                <p>*For any other details about artwork or prices<a target="_blank" href="https://wa.me/number?text=Hi, I'm intrested in this artowrk https://domain.com/view-product/?pid=<?php echo $pid; ?>"> Contact Us </a></p>
+                <p>*For any other details about artwork or prices<a target="_blank" href="https://wa.me/number?text=Hi, I'm intrested in this artowrk https://ramsangani.com/view-product/?pid=<?php echo $pid; ?>"> Contact Us </a></p>
             </div>
         </div>
         <div class="right">
